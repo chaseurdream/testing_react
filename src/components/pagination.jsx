@@ -23,7 +23,7 @@ const populatePageItems = (propName) => (WrappedComponent) => {
             let pageState = e.target.getAttribute("data-pageState"),
                 pageNo = this.state.pageNo;
 
-            const totalPages = 10;
+            const totalPages = Math.ceil(this.props.totalItems / this.state.display);
 
             switch (pageState) {
                 case "first":
@@ -49,14 +49,17 @@ const populatePageItems = (propName) => (WrappedComponent) => {
 
 
         render() {
+            let indexBegin = (this.state.pageNo - 1) * this.state.display,
+            indexEnd = indexBegin + parseInt(this.state.display, 10);
+
             return <div>
                 <span onClick={this.pageChange} data-pageState="first">first</span>
                 <span onClick={this.pageChange} data-pageState="prev">prev</span>
                 <input type="text" placeholder="page no" value={this.state.pageNo} />
                 <span onClick={this.pageChange} data-pageState="next">next</span>
                 <span onClick={this.pageChange} data-pageState="last">last</span>
-                <span>display:</span><input type="text" onChange={this.changeSize} value={this.state.display} /> <span> at a time({this.state.display})</span>
-                <WrappedComponent />
+                <span>display:</span><input type="text" onChange={this.changeSize} value={this.state.display} /> <span> at a time({this.props.display})</span>
+                <WrappedComponent display={this.state.display} pageNo={this.state.pageNo} indexBegin={indexBegin} indexEnd={indexEnd}/>
                 <span>This is the pagination footer</span>
             </div>;
         }

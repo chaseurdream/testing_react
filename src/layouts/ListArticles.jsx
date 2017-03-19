@@ -12,8 +12,7 @@ class ListArticles extends Component {
 
     render() {
         return <div>
-            {this.props.display} / 
-                {this.state.someLargeArray.map(x => <div>{x}</div>)}
+                {this.state.someLargeArray.slice(this.props.indexBegin, this.props.indexEnd).map(x => <div>{x}</div>)}
         </div>
     }
 }
