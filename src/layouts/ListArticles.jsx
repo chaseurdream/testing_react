@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import populatePageItems from './../components/pagination.jsx';
+import { user_data } from './../providers/fake-users.js'
 
 class ListArticles extends Component {
     constructor() {
@@ -11,6 +12,7 @@ class ListArticles extends Component {
     }
 
     render() {
+        console.log(user_data);
         return <div>
                 {this.state.someLargeArray.slice(this.props.indexBegin, this.props.indexEnd).map(x => <div>{x}</div>)}
         </div>

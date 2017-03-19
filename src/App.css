@@ -7,6 +7,10 @@
   height: 80px;
 }
 
+.ColGreen {
+  color: green;
+};
+
 .App-header {
   background-color: #222;
   height: 150px;
