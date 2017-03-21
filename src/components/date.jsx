@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+// import bootstrap from 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 class Date extends Component {
     render() {
-        let format = this.props.format || 'dd MMM YYYY',
+        let format = this.props.format || 'DD MMM YYYY',
         date = this.props.date || moment();
-        return <div>    
-            <span>moment({date}).format({format})</span>
+        return <div className={this.props.className}>    
+            <span>{moment(date).format(format)}</span>
         </div>
     }
 }

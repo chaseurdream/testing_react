@@ -1,0 +1,59 @@
+.inline-block {
+    display: inline-block;
+}
+
+.img-height {
+    height: 11.8rem;
+}
+
+.card-size {
+    width: 65rem;
+}
+
+.margin-top-1 {
+    margin-top: 1rem;
+}
+
+.padding-left-1 {
+    padding-left: 1rem;
+}
+
+.font-size-12 {
+    font-size: 1.2rem;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.img-space {
+    width: 15rem;
+}
+
+.info-space {
+    width: 45rem;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-color-grey {
+    color: #7d7d7d;
+}
+
+.padding-top-1 {
+    padding-top: 1rem;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.margin-left-1 {
+    margin-left: 1px;
+}
+
+.label-width-2{
+    width: 5rem;
+}

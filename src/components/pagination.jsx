@@ -4,7 +4,6 @@ const populatePageItems = (propName) => (WrappedComponent) => {
     return class Pagination extends Component {
         constructor(props) {
             super();
-            console.log(props[propName]);
             let display = props[propName];
             this.state = {
                 pageNo: 1,

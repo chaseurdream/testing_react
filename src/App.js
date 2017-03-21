@@ -3,7 +3,6 @@ import './App.css';
 import AddItem from './pages/add-item/add-item.jsx';
 import ListArticles from './layouts/ListArticles.jsx';
 import HighStocks from './components/HighStocks.jsx';
-import UserCard from './layouts/UserCard.jsx';
 
 class App extends Component {
   render() {
@@ -13,7 +12,6 @@ class App extends Component {
         <AddItem/>
         <ListArticles totalItems={100} display={5}/>
         <HighStocks id="container"/>
-        <UserCard/>
       </div>
     );
   }
