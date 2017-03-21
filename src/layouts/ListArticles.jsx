@@ -14,7 +14,6 @@ class ListArticles extends Component {
     }
 
     render() {
-        console.log(users_data);
         return <div>
             {this.state.someLargeArray.slice(this.props.indexBegin, this.props.indexEnd).map(x =>
                 <UserCard

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Highcharts from 'highcharts/highstock';
+import { graph_data } from '../providers/fake-users'
 
 class HighStocks extends Component {
     componentDidMount() {
@@ -1850,6 +1851,10 @@ class HighStocks extends Component {
             [1489622400000, 140.69],
             [1489708800000, 139.99]
         ]
+
+        // console.log(graph_data);
+        data = graph_data.map(x => [Date.parse(x[0]), 1])
+        // console.log(data);
 
         Highcharts.stockChart('container', {
             rangeSelector: {
